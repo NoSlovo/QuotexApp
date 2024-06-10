@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "971534713246",
+    "firebase_url": "https://quotex-c1092-default-rtdb.firebaseio.com",
+    "project_id": "quotex-c1092",
+    "storage_bucket": "quotex-c1092.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971534713246:android:a824165093a93ecb39568f",
+        "android_client_info": {
+          "package_name": "com.my.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOHvfgadnWJoBn_cXRRhlfXOp9hoqgyPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
