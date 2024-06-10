@@ -8,6 +8,5 @@ public class NewsElement : MonoBehaviour
     public void SetData(string body)
     {
         _body.text = body;
-        Debug.log("Test");
     }
 }
