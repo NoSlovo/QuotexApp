@@ -13,20 +13,25 @@ namespace Bootstrapper
         [SerializeField] private List<Sprite> _sprites;
 
         private RequestingNews _requestingNews;
-
+        private int _imageIndex = 0;
         private NewsItems _items;
 
         private void Start()
         {
             InitServiceLocator();
+            SwitchImage();
             RegisterService();
+            SwitchImage();
+            SwitchImage();
+            SwitchImage();
+            SwitchImage();
             LoadNextSceen();
         }
 
         private void InitServiceLocator() => ServiceLocator.Init();
-        
 
-        private async void  RegisterService()
+
+        private async void RegisterService()
         {
             _requestingNews = new RequestingNews();
             _items = await _requestingNews.GetNews();
@@ -36,6 +41,15 @@ namespace Bootstrapper
         private void LoadNextSceen()
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        private void SwitchImage()
+        {
+            if (_imageIndex <= _sprites.Count)
+            {
+                _image.sprite = _sprites[_imageIndex];
+                _imageIndex++;
+            }
         }
     }
 }
