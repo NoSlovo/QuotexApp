@@ -25,6 +25,7 @@ namespace Bootstrapper
             SwitchImage();
             SwitchImage();
             SwitchImage();
+            DontDestroyOnLoad(this);
             LoadNextSceen();
         }
 
