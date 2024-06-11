@@ -70,7 +70,6 @@
      <Compile Include="Assets\Scripts\Bootstrapper\Bootstraper.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\Scripts\AppData\NewsData.cs" />
-     <Compile Include="Assets\DataScreen.cs" />
      <Compile Include="Assets\MenuSlider.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
