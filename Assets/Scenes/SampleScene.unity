@@ -1269,6 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _newsScreen: {fileID: 8983038537533609546, guid: faff55dec59313e49bc311d37ce3ddd6, type: 3}
   _ariclesAndReviews: {fileID: 4793923468274111457, guid: 817f8caf328bd8d48a326c0e3ad5860b, type: 3}
+  _menuSlider: {fileID: 2118862442}
 --- !u!1 &1685691925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,4 +1558,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf4b9148e8e881644b807da7c76032fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rectTransform: {fileID: 0}
+  _rectTransform: {fileID: 2118862441}
