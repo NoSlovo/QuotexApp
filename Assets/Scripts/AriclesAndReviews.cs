@@ -1,14 +1,15 @@
 using Firebase.Database;
+using Screens;
 using UnityEngine;
 
-public class CryptocurrencyScreen : MonoBehaviour
+public class AriclesAndReviews : BaseScreen
 {
     [SerializeField] private CryptocurrencyItem _item;
     [SerializeField] private RectTransform _instanceTransform;
 
     private DatabaseReference _db;
 
-    private void Start()
+    public override void Open()
     {
         _db = FirebaseDatabase.DefaultInstance.RootReference;
         CreateItemsData();
@@ -26,6 +27,12 @@ public class CryptocurrencyScreen : MonoBehaviour
             var instanceItem = Instantiate(_item, _instanceTransform);
             instanceItem.SetData(data);
         }
+    }
+
+
+    public override void Close()
+    {
+        Destroy(gameObject);
     }
 }
 

@@ -10,10 +10,7 @@ public class NewsScreen : BaseScreen
 
     private NewsItems _items;
 
-    public override void Open()
-    {
-        Init();
-    }
+    public override void Open() => Init();
 
 
     private async void Init()
@@ -22,7 +19,7 @@ public class NewsScreen : BaseScreen
         CreateItems();
     }
 
-    public void CreateItems()
+    private void CreateItems()
     {
         for (int i = 0; i < _items.NewsArray.Length; i++)
         {
@@ -31,9 +28,5 @@ public class NewsScreen : BaseScreen
         }
     }
 
-
-    public override void Close()
-    {
-        throw new System.NotImplementedException();
-    }
+    public override void Close() => Destroy(gameObject);
 }

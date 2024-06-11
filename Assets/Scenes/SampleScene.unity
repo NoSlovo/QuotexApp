@@ -766,7 +766,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1106548305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623143986}
+        m_TargetAssemblyTypeName: Screens.ScreenLauncher, Assembly-CSharp
+        m_MethodName: OpenArticlesWindow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1106548305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1103,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1554109064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623143986}
+        m_TargetAssemblyTypeName: Screens.ScreenLauncher, Assembly-CSharp
+        m_MethodName: OpenNewsScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1554109064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,6 +1268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _newsScreen: {fileID: 8983038537533609546, guid: faff55dec59313e49bc311d37ce3ddd6, type: 3}
+  _ariclesAndReviews: {fileID: 4793923468274111457, guid: 817f8caf328bd8d48a326c0e3ad5860b, type: 3}
 --- !u!1 &1685691925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118862441}
+  - component: {fileID: 2118862442}
   m_Layer: 5
   m_Name: MenuSlider
   m_TagString: Untagged
@@ -1519,3 +1545,16 @@ RectTransform:
   m_AnchoredPosition: {x: -1000, y: 0}
   m_SizeDelta: {x: 992.82, y: 0}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &2118862442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118862440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4b9148e8e881644b807da7c76032fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rectTransform: {fileID: 0}
