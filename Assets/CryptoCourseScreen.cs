@@ -7,7 +7,7 @@ public class CryptoCourseScreen : BaseScreen
 {
     [SerializeField] private CryptoItem _itemPrefab;
     [SerializeField] private RectTransform _conteinerRectTransform;
-    
+
     private RootObject _rootObject;
 
     public override void Open()
@@ -18,10 +18,15 @@ public class CryptoCourseScreen : BaseScreen
 
     private void CreateItems()
     {
-        foreach (var item in _rootObject.Data)
+        for (int i = 0; i < _rootObject.Data.Count && i <= 7; i++)
         {
             var instanceItem = Instantiate(_itemPrefab, _conteinerRectTransform);
-            instanceItem.SetData(item.CoinInfo.URLImage,item.CoinInfo.Name,item.DISPLAY.USD.Price);
+            instanceItem.SetData
+            (
+                _rootObject.Data[i].CoinInfo.URLImage,
+                _rootObject.Data[i].CoinInfo.Name,
+                _rootObject.Data[i].DISPLAY.USD.Price
+            );
         }
     }
 
