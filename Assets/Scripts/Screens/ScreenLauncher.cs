@@ -1,11 +1,13 @@
+using Screens.ArticlesScreen;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Screens
 {
     public class ScreenLauncher : MonoBehaviour
     {
         [SerializeField] private NewsScreen _newsScreen;
-        [SerializeField] private AriclesAndReviews _ariclesAndReviews;
+        [SerializeField] private ArticlesAndReviews articlesAndReviews;
         [SerializeField] private AbautUseScreen _abautUseScreen;
         [SerializeField] private MenuSlider _menuSlider;
 
@@ -15,7 +17,7 @@ namespace Screens
 
         public void OpenNewsScreen() => InstanceScreen(_newsScreen);
 
-        public void OpenArticlesWindow() => InstanceScreen(_ariclesAndReviews);
+        public void OpenArticlesWindow() => InstanceScreen(articlesAndReviews);
         public void OpenAbautUseWindow() => InstanceScreen(_abautUseScreen);
 
         private void InstanceScreen(BaseScreen screen)
