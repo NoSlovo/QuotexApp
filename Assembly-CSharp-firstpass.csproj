@@ -48,7 +48,11 @@
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePicker.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePickerExtensions.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePicker_DayButton_Pool.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePicker_DateRange.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePickerUtilities.cs" />
      <Compile Include="Assets\Plugins\UI\TableLayout\TableRow.cs" />
      <Compile Include="Assets\Plugins\UI\TableLayout\TableCell.cs" />
@@ -65,19 +69,15 @@
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePicker_DayHeader.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\TextMesh Pro\DatePicker_TextMeshProDefaults.cs" />
      <Compile Include="Assets\Plugins\UI\TableLayout\TableLayoutUtilities.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\TextMesh Pro\DatePicker_TextMeshProUtilities.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\Example\ExampleController.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePicker_Config.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Plugins\UI\TableLayout\TableLayout.cs" />
      <Compile Include="Assets\Plugins\UI\DatePicker\DatePickerCache.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <None Include="Assets\Plugins\UI\DatePicker\Documentation\Change List.txt" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\Plugins\UI\TableLayout\Documentation\Change List.txt" />
@@ -324,6 +324,15 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>E:\Test\QuotexAppTwo\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Firebase.App">
+     <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>E:\Test\QuotexAppTwo\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
      <Reference Include="Firebase.Database">
      <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Firebase.Database.dll</HintPath>
      </Reference>
@@ -333,23 +342,14 @@
      <Reference Include="Google.MiniJson">
      <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>E:\Test\QuotexAppTwo\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="Firebase.Platform">
      <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
      </Reference>
-     <Reference Include="Firebase.App">
-     <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Firebase.App.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>E:\Test\QuotexAppTwo\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.1\Runtime\Newtonsoft.Json.dll</HintPath>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>E:\Test\QuotexAppTwo\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Firebase.Auth">
      <HintPath>E:\Test\QuotexAppTwo\Assets\Firebase\Plugins\Firebase.Auth.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>E:\Test\QuotexAppTwo\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

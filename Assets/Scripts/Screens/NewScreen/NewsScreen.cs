@@ -13,7 +13,7 @@ public class NewsScreen : BaseScreen
     public override void Open() => Init();
 
 
-    private async void Init()
+    private void Init()
     {
         _items = ServiceLocator.Instance.GetService<NewsItems>();
         CreateItems();

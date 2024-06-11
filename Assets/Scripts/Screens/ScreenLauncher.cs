@@ -6,6 +6,7 @@ namespace Screens
     {
         [SerializeField] private NewsScreen _newsScreen;
         [SerializeField] private AriclesAndReviews _ariclesAndReviews;
+        [SerializeField] private AbautUseScreen _abautUseScreen;
         [SerializeField] private MenuSlider _menuSlider;
 
         private BaseScreen _screenOpen;
@@ -21,14 +22,15 @@ namespace Screens
             var createItem = Instantiate(screen, transform);
             createItem.Open();
             _menuSlider.Close();
+            
             if (_screenOpen != null)
             {
-                _screenOpen.Header.ButtonMenuOpen.onClick.RemoveListener(_menuSlider.Open);
+                _screenOpen.Header.OnClick -= _menuSlider.Open;
                 _screenOpen.Close();
             }
-
             _screenOpen = createItem;
-            _screenOpen.Header.ButtonMenuOpen.onClick.AddListener(_menuSlider.Open);
+            _screenOpen.Header.OnClick += _menuSlider.Open;
+
         }
     }
 }
