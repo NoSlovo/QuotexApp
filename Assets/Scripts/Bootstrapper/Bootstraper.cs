@@ -17,38 +17,43 @@ namespace Bootstrapper
         [SerializeField] private List<Sprite> _sprites;
 
         private RequestingNews _requestingNews;
-        private DatabaseReference _db;
+        private RequestCoins _requestCoins;
+        private RootObject _rootObject;
         private int _imageIndex = 0;
         private NewsItems _items;
 
-        private void Start()
+        private async void Start()
         {
-            InitServiceLocator();
+            InitServices();
+            SwitchImage();
+            SwitchImage();
+
+            var daley = TimeSpan.FromMilliseconds(1f);
+            _items = await _requestingNews.GetNews();
+            _rootObject = await _requestCoins.GetData();
+            
+            while (_items == null)
+                await Task.Delay(daley);
+            
             SwitchImage();
             RegisterService();
-            SwitchImage();
-            SwitchImage();
             SwitchImage();
             SwitchImage();
             DontDestroyOnLoad(this);
             LoadNextSceen();
         }
 
-        private void InitServiceLocator() => ServiceLocator.Init();
-
-
-        private async void RegisterService()
+        private void InitServices()
         {
-            var daley = TimeSpan.FromMilliseconds(1f);
+            ServiceLocator.Init();
             _requestingNews = new RequestingNews();
-            _items = await _requestingNews.GetNews();
+            _requestCoins = new RequestCoins();
+        }
 
-            while (_items == null)
-            {
-                await Task.Delay(daley);
-            }
-
+        private void RegisterService()
+        {
             ServiceLocator.Instance.RegisterService(_items);
+            ServiceLocator.Instance.RegisterService(_rootObject);
         }
 
         private async void LoadNextSceen() =>

@@ -8,6 +8,7 @@ namespace Screens
         [SerializeField] private NewsScreen _newsScreen;
         [SerializeField] private ArticlesAndReviews articlesAndReviews;
         [SerializeField] private AbautUseScreen _abautUseScreen;
+        [SerializeField] private CryptoCourseScreen _cryptoCourseScreen;
         [SerializeField] private MenuSlider _menuSlider;
 
         private BaseScreen _screenOpen;
@@ -18,6 +19,7 @@ namespace Screens
 
         public void OpenArticlesWindow() => InstanceScreen(articlesAndReviews);
         public void OpenAbautUseWindow() => InstanceScreen(_abautUseScreen);
+        public void OpenCryptoCourseWindow() => InstanceScreen(_cryptoCourseScreen);
 
         private void InstanceScreen(BaseScreen screen)
         {
