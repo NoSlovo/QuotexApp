@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AriclesAndReviews : BaseScreen
 {
-    [SerializeField] private CryptocurrencyItem _item;
+    [SerializeField] private AcriclesItem _item;
     [SerializeField] private RectTransform _instanceTransform;
 
     private DatabaseReference _db;

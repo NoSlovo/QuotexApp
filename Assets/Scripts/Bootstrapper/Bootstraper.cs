@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using AppData;
+using Cysharp.Threading.Tasks;
 using DI;
+using Firebase.Database;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,6 +15,7 @@ namespace Bootstrapper
         [SerializeField] private List<Sprite> _sprites;
 
         private RequestingNews _requestingNews;
+        private DatabaseReference _db;
         private int _imageIndex = 0;
         private NewsItems _items;
 
@@ -39,10 +42,9 @@ namespace Bootstrapper
             ServiceLocator.Instance.RegisterService(_items);
         }
 
-        private void LoadNextSceen()
-        {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        private async void LoadNextSceen() =>
+            await SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+
 
         private void SwitchImage()
         {

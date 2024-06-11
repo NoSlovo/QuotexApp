@@ -16,6 +16,7 @@ namespace Screens
         public void OpenNewsScreen() => InstanceScreen(_newsScreen);
 
         public void OpenArticlesWindow() => InstanceScreen(_ariclesAndReviews);
+        public void OpenAbautUseWindow() => InstanceScreen(_abautUseScreen);
 
         private void InstanceScreen(BaseScreen screen)
         {

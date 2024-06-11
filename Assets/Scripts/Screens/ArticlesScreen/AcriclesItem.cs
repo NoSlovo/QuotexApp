@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CryptocurrencyItem : MonoBehaviour
+public class AcriclesItem : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _labale;
     [SerializeField] private DataScreen _dataScreen;
@@ -10,7 +10,7 @@ public class CryptocurrencyItem : MonoBehaviour
 
     private Data _dataItem;
 
-    private void Start() => _buttonEnterScreen.onClick.AddListener(EnterScreen);
+    //private void Start() => _buttonEnterScreen.onClick.AddListener(EnterScreen);
     
 
     public void SetData(Data data)
@@ -25,5 +25,5 @@ public class CryptocurrencyItem : MonoBehaviour
         instanceScreen.SetData(_dataItem.Lable, _dataItem.Body);
     }
 
-    private void OnDisable() => _buttonEnterScreen.onClick.RemoveListener(EnterScreen);
+   // private void OnDisable() => _buttonEnterScreen.onClick.RemoveListener(EnterScreen);
 }
