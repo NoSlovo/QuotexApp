@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AppData;
 using Cysharp.Threading.Tasks;
 using DI;
@@ -37,8 +39,15 @@ namespace Bootstrapper
 
         private async void RegisterService()
         {
+            var daley = TimeSpan.FromMilliseconds(1f);
             _requestingNews = new RequestingNews();
             _items = await _requestingNews.GetNews();
+
+            while (_items == null)
+            {
+                await Task.Delay(daley);
+            }
+
             ServiceLocator.Instance.RegisterService(_items);
         }
 

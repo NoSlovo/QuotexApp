@@ -1,6 +1,5 @@
 using Screens.ArticlesScreen;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Screens
 {
