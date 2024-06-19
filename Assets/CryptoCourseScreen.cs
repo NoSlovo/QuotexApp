@@ -20,6 +20,9 @@ public class CryptoCourseScreen : BaseScreen
     {
         for (int i = 0; i < _rootObject.Data.Count && i <= 7; i++)
         {
+            if (_rootObject.Data[i] == null)
+                continue;
+            
             var instanceItem = Instantiate(_itemPrefab, _conteinerRectTransform);
             instanceItem.SetData
             (
